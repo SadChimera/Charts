@@ -9,9 +9,10 @@
     <div>
         <canvas id="myChart"></canvas>
       </div>
+<!--^^ the id of the canvas called myChart-->
       
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      
+<!--^^ include a chart link from CDN-->
       <script>
         const ctx = document.getElementById('myChart');
       
@@ -21,18 +22,25 @@
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
             datasets: [{
               label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
-              borderWidth: 1
+              data: [15, 19, 3, 5, 2, 3],
+              borderWidth: 20
             }]
           },
           options: {
             scales: {
               y: {
-                beginAtZero: true
+                beginAtZero: false
               }
             }
           }
         });
       </script>
+
+<!--^^ Chart gets the 'bar' type; its labels are colors such 'red' which are just the titles of the
+x-axis; in datasets, the label '# of votes' are the title; the data gets to be manually adjusted like
+'12, 19'; the borderwidth is 1 for how THICK the blue datasets are; beginAtZero says 'true' because
+it begins at 0, if not it can literally be anything else; 
+ -->      
+
 </body>
 </html>
