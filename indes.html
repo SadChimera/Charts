@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+<!--^^ the id of the canvas called myChart-->
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!--^^ include a chart link from CDN-->
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Red', 'Blue', 'Yellow'],
+            datasets: [{
+              label: '# of Votes',
+              data: [15, 19, 3],
+              borderWidth: 20
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: false
+              }
+            }
+          }
+        });
+        const data = {
+            labels: ['Red', 'Blue', 'Yellow'],
+            datasets: [
+                {
+                    label: 'Dataset 1',
+                    data: [1, 2, 3],
+                    borderColor: '#36A2EB',
+                    backgroundColor: '#9BD0F5',
+                },
+                {
+                    label: 'Dataset 2',
+                    data: [2, 3, 4],
+                borderColor: '#FF6384',
+                backgroundColor: '#FFB1C1',
+                }
+            ]
+        };
+
+      </script>   
+
+</body>
+</html>
