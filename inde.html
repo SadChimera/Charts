@@ -18,7 +18,7 @@
         const ctx = document.getElementById('myChart');
       
         new Chart(ctx, {
-          type: 'pie',
+          type: 'doughnut',
           data: {
             datasets: [{
               label: '# of Votes',
@@ -30,10 +30,7 @@
         
       </script>
 
-<!-- ^^changing the 'type' from bar to pie would allow the chart to change into pie; you
- could also remove the 'labels' if they do not really benefit; you can also remove options, 
- scales, and y-axis since a pie chart doesn't really need it; borderWidth changes white line
- thickness;-->
+
 
 </body>
 </html>
